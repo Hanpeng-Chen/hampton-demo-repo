@@ -4,17 +4,15 @@ var glob = require('glob')
 function getEntry() {
   var entries = {}
   if (process.env.NODE_ENV == 'production') {
-    entries = {
-      index: {
-        // page的入口
-        entry: 'src/modules/' + projectname + '/main.js',
-        // 模板来源
-        template: 'public/index.html',
-        // 在 dist/index.html 的输出
-        filename: 'index.html',
-        title: projectname,
-        chunks: ['chunk-vendors', 'chunk-common', 'index']
-      }
+    entries[projectname] = {
+      // page的入口
+      entry: 'src/modules/' + projectname + '/main.js',
+      // 模板来源
+      template: 'public/index.html',
+      // 在 dist/index.html 的输出
+      filename: 'index.html',
+      title: projectname,
+      chunks: ['chunk-vendors', 'chunk-common', 'index']
     }
   } else {
     var items = glob.sync( './src/modules/*/*.js')
