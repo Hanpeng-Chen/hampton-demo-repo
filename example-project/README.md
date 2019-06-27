@@ -1,6 +1,9 @@
 # example-project
 本工程主要用来实现一些基于Vue工程的前端demo
 
+# demo列表
+- PDF.js使用demo：src/pages/pdfjs-demo.vue
+
 ## Project setup
 ```
 npm install
