@@ -37,6 +37,7 @@ function getEntry() {
 var pages = getEntry()
 module.exports = {
   productionSourceMap: false, // 生产禁止显示源代码
+  publicPath: projectname ? '/' + projectname : '/',
   outputDir: 'dist/' + projectname,
   pages: pages
 }
