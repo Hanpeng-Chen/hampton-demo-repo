@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="go2PdfDemoPage">PDF在线预览demo</button>
+    <button @click="go2PdfDemoPage">PDF在线预览</button>
   </div>
 </template>
 
