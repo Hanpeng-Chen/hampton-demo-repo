@@ -25,5 +25,10 @@ npm run test
 npm run lint
 ```
 
+### Create new module
+```
+npm run create:module
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
