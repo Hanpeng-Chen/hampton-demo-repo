@@ -1,14 +1,14 @@
 const glob = require('glob')
 const npmConfigArgv = JSON.parse(process.env.npm_config_argv)
-const config = {}
-let index = 2 // 自定义参数开始的下标，自定义参数以  --module=projectA 格式传入
-const cooked = npmConfigArgv.cooked
-const length = npmConfigArgv.cooked.length
-while((index += 2) <= length) {
-  config[cooked[index - 2]] = cooked[index - 1]
+const original = npmConfigArgv.original || []
+let moduleName = null
+for (let i = 0; i < original.length; i++) {
+  const originalItem = original[i]
+  if (/^--module=(.)?/.test(originalItem)) {
+    moduleName = originalItem.replace('--module=', '')
+    break
+  }
 }
-
-let moduleName = config['--module']
 
 function getPages() {
   let entries = {}
