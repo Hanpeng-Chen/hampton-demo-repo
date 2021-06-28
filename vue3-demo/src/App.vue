@@ -1,15 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App" title="Vue3 demo"/>
+  <TeleportComponent></TeleportComponent>
+  <SuspenseDemo></SuspenseDemo>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import TeleportComponent from './components/TeleportComponent.vue'
+import SuspenseDemo from './components/SuspenseDemo.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    TeleportComponent,
+    SuspenseDemo
   }
 }
 </script>
